@@ -1,3 +1,7 @@
+
+OUT_OF_BOUNDS = float('-inf')
+# print(OUT_OF_BOUNDS)
+
 def calculate(first_number, second_number, operator):
     result = 0
     if operator == "+":
@@ -9,7 +13,7 @@ def calculate(first_number, second_number, operator):
     elif operator == "/":   
         result = (first_number / second_number)
     else:
-        result = -1
+        result = OUT_OF_BOUNDS
     return result
 
 
@@ -25,7 +29,7 @@ operator = input("What operation do you wnat me to do (+, -, *, /)? ")
  
 result = calculate(first_number, second_number, operator)
 
-if result == -1:
+if result == OUT_OF_BOUNDS:
     print("you need valid operator(+, -, *, /)?")
 else:
     print (result)
